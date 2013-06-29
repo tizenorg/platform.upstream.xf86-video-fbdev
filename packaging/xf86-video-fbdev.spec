@@ -6,6 +6,7 @@ Summary:        Framebuffer video driver for the Xorg X server
 Url:            http://xorg.freedesktop.org/
 Group:          System/X11/Servers/XF86_4
 Source0:        http://xorg.freedesktop.org/releases/individual/driver/%{name}-%{version}.tar.bz2
+Source1001: 	xf86-video-fbdev.manifest
 BuildRequires:  pkg-config
 BuildRequires:  pkgconfig(fontsproto)
 BuildRequires:  pkgconfig(pciaccess) >= 0.8.0
@@ -27,6 +28,7 @@ configurations are supported.
 
 %prep
 %setup -q
+cp %{SOURCE1001} .
 
 %build
 %configure
@@ -36,6 +38,7 @@ make %{?_smp_mflags}
 %make_install
 
 %files
+%manifest %{name}.manifest
 %defattr(-,root,root)
 %doc COPYING
 %dir %{_libdir}/xorg/modules/drivers
