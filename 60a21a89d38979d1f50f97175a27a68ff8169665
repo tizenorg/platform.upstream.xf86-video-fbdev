@@ -1,0 +1,8 @@
+Change-Id: I60a21a89d38979d1f50f97175a27a68ff8169665
+Code-Review+2: Ryan Ware <ware@linux.intel.com>
+Verified+1: Ryan Ware <ware@linux.intel.com>
+Submitted-by: Ryan Ware <ware@linux.intel.com>
+Submitted-at: Mon, 08 Jul 2013 09:38:16 -0700
+Reviewed-on: https://review.tizen.org/gerrit/5026
+Project: platform/upstream/xf86-video-fbdev
+Branch: refs/heads/tizen
