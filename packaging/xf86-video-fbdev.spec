@@ -1,3 +1,5 @@
+%bcond_with x
+
 Name:           xf86-video-fbdev
 Version:        0.4.3
 Release:        0
@@ -17,6 +19,10 @@ BuildRequires:  pkgconfig(videoproto)
 BuildRequires:  pkgconfig(xorg-macros) >= 1.8
 BuildRequires:  pkgconfig(xorg-server) >= 1.0.99.901
 BuildRequires:  pkgconfig(xproto)
+
+%if !%{with x}
+ExclusiveArch:
+%endif
 
 %description
 fbdev is an Xorg driver for framebuffer devices.
