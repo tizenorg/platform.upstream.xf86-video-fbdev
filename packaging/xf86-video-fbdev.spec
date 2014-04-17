@@ -1,7 +1,7 @@
 %bcond_with x
 
 Name:           xf86-video-fbdev
-Version:        0.4.3
+Version:        0.4.4
 Release:        0
 License:        MIT
 Summary:        Framebuffer video driver for the Xorg X server
@@ -37,7 +37,7 @@ configurations are supported.
 cp %{SOURCE1001} .
 
 %build
-%configure
+%autogen
 make %{?_smp_mflags}
 
 %install
